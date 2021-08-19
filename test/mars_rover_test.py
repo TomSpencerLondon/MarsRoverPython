@@ -11,13 +11,13 @@ class MarsRoverTest(unittest.TestCase):
         self.assertEqual("0:0:N", result)
 
     @parameterized.expand([
-        ('R', '0:0:E')
+        ('R', '0:0:E'),
+        ('RR', '0:0:S')
     ])
     def test_rotate(self, command, expected):
         rover = Rover()
         result = rover.execute(command)
         self.assertEqual(expected, result)
-
 
 if __name__ == '__main__':
     unittest.main()

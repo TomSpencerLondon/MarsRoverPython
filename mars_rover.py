@@ -15,4 +15,4 @@ class Rover(object):
         if (command == 'RRR'):
             direction = 'W'
 
-        return f"0:0:{direction}"
+        return f"{position}:{direction}"

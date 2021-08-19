@@ -3,13 +3,16 @@ from dataclasses import dataclass, replace
 @dataclass(frozen=True)
 class Rover(object):
     def execute(self, command):
+        position = '0:0'
+        direction = 'N'
+
         if (command == 'R'):
-            return "0:0:E"
+            direction = 'E'
 
         if (command == 'RR'):
-            return "0:0:S"
+            direction = 'S'
 
         if (command == 'RRR'):
-            return "0:0:W"
+            direction = 'W'
 
-        return "0:0:N"
+        return f"0:0:{direction}"

@@ -9,4 +9,7 @@ class Rover(object):
         if (command == 'RR'):
             return "0:0:S"
 
+        if (command == 'RRR'):
+            return "0:0:W"
+
         return "0:0:N"

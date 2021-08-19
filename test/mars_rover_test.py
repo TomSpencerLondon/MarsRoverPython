@@ -12,7 +12,8 @@ class MarsRoverTest(unittest.TestCase):
 
     @parameterized.expand([
         ('R', '0:0:E'),
-        ('RR', '0:0:S')
+        ('RR', '0:0:S'),
+        ('RRR', '0:0:W')
     ])
     def test_rotate(self, command, expected):
         rover = Rover()
